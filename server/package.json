@@ -13,7 +13,13 @@
   "type": "module",
   "dependencies": {
     "cors": "^2.8.6",
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "@langchain/community": "^0.3.45",
+    "@langchain/core": "^0.3.57",
+    "@langchain/langgraph": "^0.3.6",
+    "@langchain/openai": "^0.5.11",
+    "dotenv": "^16.5.0",
+    "langchain": "^0.3.27"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
