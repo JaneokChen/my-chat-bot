@@ -1,9 +1,10 @@
-import { ChatOpenAI } from "@langchain/openai";
+import { ChatDeepSeek } from '@langchain/deepseek';
 import "dotenv/config";
 
-export default new ChatOpenAI({
-  model: "deepseek-chat",
+export default new ChatDeepSeek({
+  model: "deepseek-flash",
   temperature: 0,
+  maxTokens: 5,
   configuration: {
     baseURL: process.env.BASE_URL,
     apiKey: process.env.API_KEY,
