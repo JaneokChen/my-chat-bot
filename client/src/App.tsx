@@ -1,5 +1,8 @@
+import React from "react";
+// 引入组件
 import Chat, { Bubble, useMessages } from "@chatui/core";
-
+// 引入样式
+import "@chatui/core/dist/index.css";
 import "./App.css";
 
 const initialMessages = [
@@ -25,7 +28,7 @@ const defaultQuickReplies = [
   },
 ];
 
-function App() {
+const App = () => {
   const { messages, appendMsg, updateMsg } = useMessages(initialMessages);
 
   /**
@@ -129,17 +132,15 @@ function App() {
   }
 
   return (
-    <div>
-      <Chat
-        navbar={{ title: "AI 助理" }}
-        messages={messages}
-        renderMessageContent={renderMessageContent}
-        quickReplies={defaultQuickReplies}
-        onQuickReplyClick={handleQuickReplyClick}
-        onSend={handleSend}
-      />
-    </div>
+    <Chat
+      navbar={{ title: "AI 助理" }}
+      messages={messages}
+      renderMessageContent={renderMessageContent}
+      quickReplies={defaultQuickReplies}
+      onQuickReplyClick={handleQuickReplyClick}
+      onSend={handleSend}
+    />
   );
-}
+};
 
 export default App;
